@@ -1,18 +1,18 @@
 import React from "react";
-import "./Home.scss";
+import "./Board.scss";
 import Layout from "../../components/Layout/Layout";
 
-const Home = () => {
+const Board = () => {
 
     return (
         <Layout title={"ToDo App"}>
-            <div className="page-home">
-                <div className="page-home__contents">
-                    Hello Home!
+            <div className="page-board">
+                <div className="page-board__contents">
+                    Hello Board!
                 </div>
             </div>
         </Layout>
     );
 };
 
-export default Home;
+export default Board;
