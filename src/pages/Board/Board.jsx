@@ -1,4 +1,3 @@
-import React from "react";
 import "./Board.scss";
 import Layout from "../../components/Layout/Layout";
 

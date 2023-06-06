@@ -1,6 +1,6 @@
-import React from "react";
 import "./Home.scss";
 import Layout from "../../components/Layout/Layout";
+import AddBoard from "../../components/AddBoard/AddBoard";
 
 const Home = () => {
 
@@ -9,6 +9,7 @@ const Home = () => {
             <div className="page-home">
                 <div className="page-home__contents">
                     Hello Home!
+                    <AddBoard />
                 </div>
             </div>
         </Layout>
