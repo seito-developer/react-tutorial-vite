@@ -8,7 +8,7 @@ const Board = (props) => {
       <Link 
         className="board__item"
         to={"/board"}
-        // state={{ boardId: item.id }}
+        state={{ boardId: props.id }}
         key={props.id}>
           <h2 className="board__title">
             {props.title}
