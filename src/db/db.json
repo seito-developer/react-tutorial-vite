@@ -1,0 +1,11 @@
+{
+    "boards": [
+        {
+            "id": 1,
+            "title": "Weekly tasks"
+        }, {
+            "id": 2,
+            "title": "Private tasks"
+        }
+    ]
+}
