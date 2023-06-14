@@ -12,7 +12,7 @@ const Home = () => {
     useEffect(()=>{
         const fetch = async () => {
             try {
-                const res = await axios.get('http://localhost:3000/boads');
+                const res = await axios.get('http://localhost:3000/boards');
                 setBoardsData(res.data);
             } catch (error) {
                 setError(error.message);
