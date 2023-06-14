@@ -7,14 +7,15 @@ import axios from "axios";
 
 const Home = () => {
     const [boardsData, setBoardsData] = useState([]);
+    const [error, setError] = useState("");
 
     useEffect(()=>{
         const fetch = async () => {
             try {
-                const res = await axios.get('http://localhost:3000/boards');
+                const res = await axios.get('http://localhost:3000/boads');
                 setBoardsData(res.data);
             } catch (error) {
-                console.log('error:', error);
+                setError(error.message);
             }
         }
         fetch();
@@ -24,6 +25,9 @@ const Home = () => {
         <Layout title={"ToDo App"}>
             <div className="page-home">
                 <div className="page-home__contents">
+                    { error && 
+                        <p>{ error }</p>
+                    }
                     { boardsData.map((board, index) => {
                         return <Board key={index} {...board} />
                     })}
