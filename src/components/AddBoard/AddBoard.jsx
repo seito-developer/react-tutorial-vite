@@ -7,15 +7,16 @@ const AddBoard = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    try {
-      const res = await axios.post('http://localhost:3000/boards');
-      console.log('res:', res);
-    } catch (error) {
-      console.log(error.message);
-    }
 
     if (title) {
+      try {
+        const res = await axios.post('http://localhost:3000/boards', {
+          title: title
+        });
+        console.log('res:', res);
+      } catch (error) {
+        console.log(error.message);
+      }
       setTitle("");
       console.log(title);
     }

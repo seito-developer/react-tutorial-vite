@@ -2,18 +2,57 @@
   "boards": [
     {
       "id": 1,
-      "title": "Weekly tasks"
+      "title": "Weekly tasks",
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Make Environemnt"
+        },
+        {
+          "id": 2,
+          "title": "Make API"
+        },
+        {
+          "id": 3,
+          "title": "Make Auth"
+        }
+      ]
     },
     {
       "id": 2,
-      "title": "Private tasks"
+      "title": "Private tasks",
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Make Environemnt"
+        },
+        {
+          "id": 2,
+          "title": "Make API"
+        },
+        {
+          "id": 3,
+          "title": "Make Auth"
+        }
+      ]
     },
     {
       "id": 3,
-      "title": "Business tasks"
-    },
-    {
-      "id": 4
+      "title": "Business tasks",
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Make Environemnt"
+        },
+        {
+          "id": 2,
+          "title": "Make API"
+        },
+        {
+          "id": 3,
+          "title": "Make Auth"
+        }
+      ]
     }
   ]
 }
