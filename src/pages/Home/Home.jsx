@@ -2,6 +2,8 @@ import "./Home.scss";
 import Layout from "../../components/Layout/Layout";
 import AddBoard from "../../components/AddBoard/AddBoard";
 import Board from "../../components/Board/Board";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const boards = [
     {
@@ -14,6 +16,17 @@ const boards = [
 ];
 
 const Home = () => {
+    const [boardsData, setBoardsData] = useState(null);
+
+    useEffect(()=>{
+        const fetch = async () => {
+            const res = await axios.get('http://localhost:3000/boards');
+            console.log('res:', res);
+            return res;
+        }
+        setBoardsData(fetch());
+        
+    },[]);
 
     return (
         <Layout title={"ToDo App"}>
