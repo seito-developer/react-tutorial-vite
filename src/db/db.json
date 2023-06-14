@@ -1,14 +1,19 @@
 {
-    "boards": [
-        {
-            "id": 1,
-            "title": "Weekly tasks"
-        }, {
-            "id": 2,
-            "title": "Private tasks"
-        }, {
-            "id": 3,
-            "title": "Business tasks"
-        }
-    ]
+  "boards": [
+    {
+      "id": 1,
+      "title": "Weekly tasks"
+    },
+    {
+      "id": 2,
+      "title": "Private tasks"
+    },
+    {
+      "id": 3,
+      "title": "Business tasks"
+    },
+    {
+      "id": 4
+    }
+  ]
 }

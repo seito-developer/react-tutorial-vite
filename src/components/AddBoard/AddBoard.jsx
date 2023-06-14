@@ -1,11 +1,20 @@
 import { useState } from 'react';
 import "./AddBoard.scss";
+import axios from 'axios';
 
 const AddBoard = () => {
   const [title, setTitle] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    try {
+      const res = await axios.post('http://localhost:3000/boards');
+      console.log('res:', res);
+    } catch (error) {
+      console.log(error.message);
+    }
+
     if (title) {
       setTitle("");
       console.log(title);
