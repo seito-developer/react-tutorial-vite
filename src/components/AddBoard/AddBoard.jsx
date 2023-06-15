@@ -2,7 +2,7 @@ import { useState } from 'react';
 import "./AddBoard.scss";
 import axios from 'axios';
 
-const AddBoard = () => {
+const AddBoard = ({boardsData, setBoardsData}) => {
   const [title, setTitle] = useState('');
 
   const handleSubmit = async (e) => {
@@ -11,11 +11,12 @@ const AddBoard = () => {
     if (title) {
       try {
         const res = await axios.post('http://localhost:3000/boards', {
-          title: title
+          title: title,
+          tasks: []
         });
-        console.log('res:', res);
+        setBoardsData([...boardsData, res.data])
       } catch (error) {
-        console.log(error.message);
+        console.log('error:', error.message);
       }
       setTitle("");
       console.log(title);

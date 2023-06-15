@@ -16,6 +16,7 @@ const Home = () => {
                 setBoardsData(res.data);
             } catch (error) {
                 setError(error.message);
+                console.log('error:', error.message);
             }
         }
         fetch();
@@ -31,7 +32,7 @@ const Home = () => {
                     { boardsData.map((board, index) => {
                         return <Board key={index} {...board} />
                     })}
-                    <AddBoard />
+                    <AddBoard boardsData={boardsData} setBoardsData={setBoardsData} />
                 </div>
             </div>
         </Layout>
